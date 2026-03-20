@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="todo-card">
+        <h1>Lista de Tarefas</h1>
+        <p class="subtitle">Adicione, conclua e remova tarefas com salvamento local em JSON.</p>
+
+        <form id="task-form" class="task-form">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Digite uma nova tarefa"
+            aria-label="Digite uma nova tarefa"
+            required
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+
+        <p id="message" class="message" aria-live="polite"></p>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

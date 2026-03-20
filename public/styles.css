@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.todo-card {
+  width: min(100%, 700px);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #475569;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 16px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.task-form button,
+.delete-button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.task-form button {
+  background: #2563eb;
+  color: #fff;
+  padding: 14px 18px;
+  font-weight: bold;
+}
+
+.task-form button:hover,
+.delete-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.message {
+  min-height: 24px;
+  margin: 0 0 12px;
+  color: #b91c1c;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-title {
+  word-break: break-word;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.delete-button {
+  background: #dc2626;
+  color: #fff;
+  padding: 10px 14px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #64748b;
+  padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .todo-card {
+    padding: 24px;
+  }
+
+  .task-form,
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-content {
+    width: 100%;
+  }
+}

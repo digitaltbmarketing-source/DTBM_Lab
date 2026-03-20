@@ -1,0 +1,12 @@
+{
+  "name": "dtbm-lab-todo",
+  "version": "1.0.0",
+  "description": "Sistema web simples de lista de tarefas com Node.js, Express e persistência em JSON.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
